@@ -7,6 +7,7 @@ resource "aws_s3_bucket" "terraform-github-bucket" {
     Environment = var.aws_tags["Environment"]
     Project     = var.aws_tags["Project"]
 }
+}
 
 #to upload data to the bucket
 resource "aws_s3_object" "terraform-github-object" {
