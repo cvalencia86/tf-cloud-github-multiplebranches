@@ -2,8 +2,10 @@
 resource "aws_s3_bucket" "terraform-github-bucket" {
   bucket = "multiplebranches-19863008"
   tags = {
-    Name  = "My Terraform integrated with Github Bucket"
-    Owner = "DevOps Team"
+    Name        = "terraform-github-multiplebranches"
+    Owner       = var.aws_tags["Owner"]
+    Environment = var.aws_tags["Environment"]
+    Project     = var.aws_tags["Project"]
   }
 }
 
