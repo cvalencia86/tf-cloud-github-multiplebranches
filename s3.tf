@@ -8,5 +8,5 @@ resource "aws_s3_object" "terraform-github-object" {
   bucket  = aws_s3_bucket.terraform-github-bucket.id
   key     = "multiplebranches.txt"
   content = "this is a sample file to test multiple branches in github with terraform cloud"
-  tags    = var.aws_tags
+  tags    = {var.aws_tags}
 }
